@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 import urllib.parse
-import config
+from . import config
 # Corrected database URL without @ in the password
 password = config.settings.database_password
 password_encoded = urllib.parse.quote(password, safe='')
